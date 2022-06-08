@@ -1,0 +1,171 @@
+/* Essas variáveis vão ajudar na hora de atribuir para algum elemento */
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #c0c0c0;
+    --botão-azul: #167bf7;
+    --cor-de-fundo: #00030c;
+    --fonte-principal: 'Inter';
+    --botão-azul-efeito: #3c92fa; 
+}
+
+body {
+    /* Função CSS */
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Pega todos os elementos HTML, ele seleciona todos eles e coloca um estilo que determinarmos*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* vh significa viewport height que seria a tela toda do dispositivo, assim ele vai usar o 100% de toda a tela */
+    height: 100vh;
+    /* Display define que será em grid */
+    display: grid;
+    /* E que serão 2 colunas e cada uma ocupara 50% da página*/
+    grid-template-columns: 50% 50%;
+}
+
+.principal {
+    /* Como a imagem não faz parte do conteúdo da página, ela fica aqui. */
+    /* Caso tivesse algum conteúdo atrelado a imagem, é preciso colocar no HTML e usar ALT explicando o que significa aquela imagem. */
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    /* Pega todo o espaço do container e vai preeencher ele, neste caso o container é a section */
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container__botao{
+    background-color: var(--botão-azul);
+    border-radius: 5px;
+    /* A medida em é o tamanho do fundo, se o tamnho da fonte é 16, o padding será de tamnho 16 */
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+/* :hover é uma pseudo-classe */
+.container__botao:hover {
+    background-color: var(--botão-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    /* No topo ele ficou com 1em e na margem de baixo ficou com 2em já nos lados ficou com 0 */
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa{
+    /* As margens do topo e o embaixo ficaram com valor 0, já a direita e a esquerda ficaram com 6em */
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width:  80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    /* Transforma a lista em flex container. A direção padrão é row que seria linha */
+    display: flex;
+    justify-content: center;
+    /* retira os ".(pontos)" que vinham por padrão dos itens da lista */
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;    
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__link a:hover {
+    color: var(--botão-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    margin: 1em 0;
+    font-size: 14px;
+    font-weight: 400;
+}
